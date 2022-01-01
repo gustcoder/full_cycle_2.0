@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  laminas:
+    build:
+      context: ../
+      dockerfile: ./.docker/Dockerfile
+    image: gustcoder/laminas
+    container_name: laminas
+    entrypoint: "composer serve"
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../:/var/www/app
