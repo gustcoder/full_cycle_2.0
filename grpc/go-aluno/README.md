@@ -7,6 +7,14 @@ https://hub.docker.com/_/golang
 https://grpc.io/docs/languages/go/quickstart/
 https://grpc.io/docs/protoc-installation/
 
+### Recursos necessários para o ambiente Go (já estão inclusos no Dockerfile)
+
+```
+apt-get install -y protobuf-compiler && \
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26 && \
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1 && \
+```
+
 ### Criar estrutura GRPC
 ```
 protoc --proto_path=proto proto/*.proto --go_out=pb --go-grpc_out=pb
