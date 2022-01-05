@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  golang:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: gustcoder/go-graphql
+    container_name: go-graphql
+    tty: true
+    volumes:
+      - .:/usr/src/app
