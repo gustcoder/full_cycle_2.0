@@ -21,4 +21,5 @@ curl localhost:8500/v1/catalog/nodes
 ```
 apk -U add bind-tools
 dig @localhost -p 8600
+dig @localhost -p 8600 consul01.node.consul
 ```
