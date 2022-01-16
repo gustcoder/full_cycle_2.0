@@ -96,3 +96,17 @@ consul reload
 ```
 consul agent -config-dir=/etc/consul.d
 ```
+
+### Gerando key com encrypt
+
+```
+consul keygen
+```
+
+### Monitorar tráfego encrypt
+
+```
+apk -U add tcpdump
+tcpdump
+tcpdump -i eth0 -an port 8301 -A
+```
