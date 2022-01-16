@@ -110,3 +110,10 @@ apk -U add tcpdump
 tcpdump
 tcpdump -i eth0 -an port 8301 -A
 ```
+
+### Habilitando user interface
+
+```
+consul agent -config-dir=/etc/consul.d -ui # como no server.json tem a config de ui, basta rodar apenas o comando abaixo normalmente
+consul agent -config-dir=/etc/consul.d
+```
