@@ -30,6 +30,7 @@ consul catalog nodes -detailed
 apk -U add bind-tools
 dig @localhost -p 8600
 dig @localhost -p 8600 consul01.node.consul
+dig @localhost -p 8600 nginx.service.consul
 ```
 
 ### Comando para subir consul server
@@ -68,4 +69,30 @@ consul join 172.25.0.2
 ### Reload no arquivo services.json
 ```
 consul reload
+```
+
+### Subindo nginx para testar
+```
+apk add nginx
+mkdir /run/nginx # pode ser que já exista
+nginx # para rodar o nginx
+ps #listar processos
+```
+
+### Configurando nginx para não retornar 404 para tudo
+```
+apk add vim # para editar os arquivos
+mkdir /usr/share/nginx/html -p # -p criar pastas recursivamente
+vim /etc/nginx/conf.d/default.conf # remover o bloco do 404 e colocar root /usr/share/nginx/html;
+vim /usr/share/nginx/html/index.html # inserir qualquer texto
+nginx -s reload # reinicia servico nginx
+curl localhost # deverá exibir novo conteúdo
+
+consul reload
+```
+
+### Para subir baseado no server.jon
+
+```
+consul agent -config-dir=/etc/consul.d
 ```
