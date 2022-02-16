@@ -4,6 +4,11 @@ kubectl get pods
 kubectl get po
 ```
 
+### Deletando Pods
+```
+kubectl delete pod pod_name
+```
+
 ### Obter ReplicaSets
 ```
 kubectl get replicasets
