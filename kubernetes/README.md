@@ -4,6 +4,11 @@ kubectl get pods
 kubectl get po
 ```
 
+### Info sobre Pods
+```
+kubectl describe pod pod_name
+```
+
 ### Deletando Pods
 ```
 kubectl delete pod pod_name
