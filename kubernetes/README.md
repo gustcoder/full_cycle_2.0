@@ -31,6 +31,8 @@ kubectl apply -f ./replicaset.yaml
 kubectl apply -f ./deployment.yaml
 ```
 
-## Deployment
-### Deployments servem para que replicasets sejam recriados quando a versão da imagem dos containers for alterada
+### Deployment
+## Deployments servem para que replicasets sejam recriados quando a versão da imagem dos containers for alterada.
+## Ao rodar um novo Deployment, será gerada um novo replicaset, porém o anterior será mantido.
+
 
