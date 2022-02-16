@@ -35,4 +35,7 @@ kubectl apply -f ./deployment.yaml
 #### Deployments servem para que replicasets sejam recriados quando a versão da imagem dos containers for alterada.
 #### Ao rodar um novo Deployment, será gerada um novo replicaset, mas o anterior será mantido (porém com 0 pods).
 
-
+### Rollback de Deployments
+```
+kubectl rollout undo deployment deployment_name
+```
