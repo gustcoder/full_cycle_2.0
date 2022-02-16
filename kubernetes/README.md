@@ -28,5 +28,9 @@ kubectl delete replicasets replicaset_name
 ```
 kubectl apply -f ./pod.yaml
 kubectl apply -f ./replicaset.yaml
+kubectl apply -f ./deployment.yaml
 ```
+
+## Deployment
+### Deployments servem para que replicasets sejam recriados quando a versão da imagem dos containers for alterada
 
