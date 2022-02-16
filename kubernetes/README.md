@@ -19,6 +19,11 @@ kubectl delete pod pod_name
 kubectl get replicasets
 ```
 
+### Deletando ReplicaSets
+```
+kubectl delete replicasets replicaset_name
+```
+
 ### Criando um Pod ou ReplicaSet
 ```
 kubectl apply -f ./pod.yaml
