@@ -40,3 +40,5 @@ kubectl apply -f ./deployment.yaml
 kubectl rollout undo deployment deployment_name
 kubectl rollout undo deployment deployment_name --to-revision=
 ```
+#### Ao fazer rollout em um Deployment, a replicaset do anterior que foi mantida anteriormente será reaproveitada, e o deployment atual
+### que ficará com 0 pods desta vez.
