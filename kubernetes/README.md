@@ -38,4 +38,5 @@ kubectl apply -f ./deployment.yaml
 ### Rollback de Deployments
 ```
 kubectl rollout undo deployment deployment_name
+kubectl rollout undo deployment deployment_name --to-revision=
 ```
